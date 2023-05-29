@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468CC72A2A233E9C003F30DD /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */; };
 		46E5502C2A20FF2E00E6A997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */; };
 		46E5502E2A20FF2E00E6A997 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */; };
-		46E550302A20FF2E00E6A997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502F2A20FF2E00E6A997 /* ViewController.swift */; };
 		46E550332A20FF2E00E6A997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E550312A20FF2E00E6A997 /* Main.storyboard */; };
 		46E550352A20FF3000E6A997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E550342A20FF3000E6A997 /* Assets.xcassets */; };
 		46E550382A20FF3000E6A997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E550362A20FF3000E6A997 /* LaunchScreen.storyboard */; };
 		46E550432A20FF3000E6A997 /* NetomiAssignmentToDoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550422A20FF3000E6A997 /* NetomiAssignmentToDoAppTests.swift */; };
 		46E5504D2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5504C2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITests.swift */; };
 		46E5504F2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5504E2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITestsLaunchTests.swift */; };
+		46E550632A21000100E6A997 /* TaskListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550622A21000100E6A997 /* TaskListVC.swift */; };
+		46E550652A21001C00E6A997 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550642A21001C00E6A997 /* AddTaskVC.swift */; };
+		46E550682A2102E400E6A997 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550662A2102E400E6A997 /* TaskTableViewCell.swift */; };
+		46E550692A2102E400E6A997 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E550672A2102E400E6A997 /* TaskTableViewCell.xib */; };
+		46E5506B2A21189D00E6A997 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506A2A21189D00E6A997 /* Task.swift */; };
+		46E5506D2A211A1800E6A997 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506C2A211A1800E6A997 /* Constants.swift */; };
+		46E5506F2A211CE200E6A997 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506E2A211CE100E6A997 /* TasksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		46E550282A20FF2E00E6A997 /* NetomiAssignmentToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetomiAssignmentToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		46E5502F2A20FF2E00E6A997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46E550322A20FF2E00E6A997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46E550342A20FF3000E6A997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E550372A20FF3000E6A997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		46E550482A20FF3000E6A997 /* NetomiAssignmentToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetomiAssignmentToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5504C2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetomiAssignmentToDoAppUITests.swift; sourceTree = "<group>"; };
 		46E5504E2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetomiAssignmentToDoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		46E550622A21000100E6A997 /* TaskListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListVC.swift; sourceTree = "<group>"; };
+		46E550642A21001C00E6A997 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
+		46E550662A2102E400E6A997 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		46E550672A2102E400E6A997 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		46E5506A2A21189D00E6A997 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		46E5506C2A211A1800E6A997 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46E5506E2A211CE100E6A997 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		468CC7282A233E8D003F30DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		46E5501F2A20FF2D00E6A997 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +121,12 @@
 		46E5502A2A20FF2E00E6A997 /* NetomiAssignmentToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */,
-				46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */,
-				46E5502F2A20FF2E00E6A997 /* ViewController.swift */,
-				46E550312A20FF2E00E6A997 /* Main.storyboard */,
-				46E550342A20FF3000E6A997 /* Assets.xcassets */,
-				46E550362A20FF3000E6A997 /* LaunchScreen.storyboard */,
+				46E550602A20FF7100E6A997 /* Resources */,
+				46E5505F2A20FF6100E6A997 /* Utilities */,
+				46E5505E2A20FF5200E6A997 /* Delegates */,
+				46E5505D2A20FF4C00E6A997 /* ViewModel */,
+				46E5505C2A20FF4600E6A997 /* Model */,
+				46E5505B2A20FF3F00E6A997 /* View */,
 				46E550392A20FF3000E6A997 /* Info.plist */,
 			);
 			path = NetomiAssignmentToDoApp;
@@ -125,6 +147,69 @@
 				46E5504E2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITestsLaunchTests.swift */,
 			);
 			path = NetomiAssignmentToDoAppUITests;
+			sourceTree = "<group>";
+		};
+		46E5505B2A20FF3F00E6A997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46E550362A20FF3000E6A997 /* LaunchScreen.storyboard */,
+				46E550312A20FF2E00E6A997 /* Main.storyboard */,
+				46E550612A20FF8A00E6A997 /* Controllers */,
+				46E550662A2102E400E6A997 /* TaskTableViewCell.swift */,
+				46E550672A2102E400E6A997 /* TaskTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46E5505C2A20FF4600E6A997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46E5506A2A21189D00E6A997 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46E5505D2A20FF4C00E6A997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46E5506E2A211CE100E6A997 /* TasksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46E5505E2A20FF5200E6A997 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */,
+				46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		46E5505F2A20FF6100E6A997 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				46E5506C2A211A1800E6A997 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		46E550602A20FF7100E6A997 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				468CC7282A233E8D003F30DD /* Fonts */,
+				46E550342A20FF3000E6A997 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		46E550612A20FF8A00E6A997 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				46E550622A21000100E6A997 /* TaskListVC.swift */,
+				46E550642A21001C00E6A997 /* AddTaskVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +316,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E550692A2102E400E6A997 /* TaskTableViewCell.xib in Resources */,
 				46E550382A20FF3000E6A997 /* LaunchScreen.storyboard in Resources */,
 				46E550352A20FF3000E6A997 /* Assets.xcassets in Resources */,
+				468CC72A2A233E9C003F30DD /* Rubik-Regular.ttf in Resources */,
 				46E550332A20FF2E00E6A997 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E550302A20FF2E00E6A997 /* ViewController.swift in Sources */,
 				46E5502C2A20FF2E00E6A997 /* AppDelegate.swift in Sources */,
+				46E5506F2A211CE200E6A997 /* TasksViewModel.swift in Sources */,
+				46E550632A21000100E6A997 /* TaskListVC.swift in Sources */,
+				46E550682A2102E400E6A997 /* TaskTableViewCell.swift in Sources */,
 				46E5502E2A20FF2E00E6A997 /* SceneDelegate.swift in Sources */,
+				46E5506D2A211A1800E6A997 /* Constants.swift in Sources */,
+				46E5506B2A21189D00E6A997 /* Task.swift in Sources */,
+				46E550652A21001C00E6A997 /* AddTaskVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

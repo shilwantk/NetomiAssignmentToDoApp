@@ -12,7 +12,7 @@ import UIKit
 class TaskListVC: UIViewController {
     
     @IBOutlet weak var tasksTableView : UITableView!
-    private var viewModel = TasksViewModel.sharedInstance
+    private var viewModel = TaskListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,6 @@ class TaskListVC: UIViewController {
         viewModel.delegate = self
         setUpTableView()
         addAddTaskButton()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tasksTableView.reloadData()
     }
     
     private func setUpTableView() {
@@ -53,6 +49,7 @@ class TaskListVC: UIViewController {
     @objc func navigateToAddTaskVC() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "AddTaskVC") as? AddTaskVC else { return }
+        vc.viewModel = self.viewModel
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

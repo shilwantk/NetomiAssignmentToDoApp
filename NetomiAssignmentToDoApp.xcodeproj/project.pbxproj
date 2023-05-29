@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4604013F2A24DABE00DB91A0 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4604013E2A24DABE00DB91A0 /* ViewController+Extension.swift */; };
+		460401422A24F95500DB91A0 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550642A21001C00E6A997 /* AddTaskVC.swift */; };
 		468CC72A2A233E9C003F30DD /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */; };
 		46E5502C2A20FF2E00E6A997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */; };
 		46E5502E2A20FF2E00E6A997 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */; };
@@ -17,12 +19,11 @@
 		46E5504D2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5504C2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITests.swift */; };
 		46E5504F2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5504E2A20FF3000E6A997 /* NetomiAssignmentToDoAppUITestsLaunchTests.swift */; };
 		46E550632A21000100E6A997 /* TaskListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550622A21000100E6A997 /* TaskListVC.swift */; };
-		46E550652A21001C00E6A997 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550642A21001C00E6A997 /* AddTaskVC.swift */; };
 		46E550682A2102E400E6A997 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550662A2102E400E6A997 /* TaskTableViewCell.swift */; };
 		46E550692A2102E400E6A997 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E550672A2102E400E6A997 /* TaskTableViewCell.xib */; };
 		46E5506B2A21189D00E6A997 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506A2A21189D00E6A997 /* Task.swift */; };
 		46E5506D2A211A1800E6A997 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506C2A211A1800E6A997 /* Constants.swift */; };
-		46E5506F2A211CE200E6A997 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506E2A211CE100E6A997 /* TasksViewModel.swift */; };
+		46E5506F2A211CE200E6A997 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5506E2A211CE100E6A997 /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4604013E2A24DABE00DB91A0 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		46E550282A20FF2E00E6A997 /* NetomiAssignmentToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetomiAssignmentToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		46E550672A2102E400E6A997 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		46E5506A2A21189D00E6A997 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		46E5506C2A211A1800E6A997 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		46E5506E2A211CE100E6A997 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		46E5506E2A211CE100E6A997 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +174,7 @@
 		46E5505D2A20FF4C00E6A997 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				46E5506E2A211CE100E6A997 /* TasksViewModel.swift */,
+				46E5506E2A211CE100E6A997 /* TaskListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				46E5506C2A211A1800E6A997 /* Constants.swift */,
+				4604013E2A24DABE00DB91A0 /* ViewController+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -345,14 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460401422A24F95500DB91A0 /* AddTaskVC.swift in Sources */,
 				46E5502C2A20FF2E00E6A997 /* AppDelegate.swift in Sources */,
-				46E5506F2A211CE200E6A997 /* TasksViewModel.swift in Sources */,
+				46E5506F2A211CE200E6A997 /* TaskListViewModel.swift in Sources */,
 				46E550632A21000100E6A997 /* TaskListVC.swift in Sources */,
 				46E550682A2102E400E6A997 /* TaskTableViewCell.swift in Sources */,
 				46E5502E2A20FF2E00E6A997 /* SceneDelegate.swift in Sources */,
+				4604013F2A24DABE00DB91A0 /* ViewController+Extension.swift in Sources */,
 				46E5506D2A211A1800E6A997 /* Constants.swift in Sources */,
 				46E5506B2A21189D00E6A997 /* Task.swift in Sources */,
-				46E550652A21001C00E6A997 /* AddTaskVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

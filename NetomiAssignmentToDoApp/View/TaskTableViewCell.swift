@@ -15,7 +15,7 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var isPendingLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
-    private var viewModel = TasksViewModel.sharedInstance
+    private var viewModel = TaskListViewModel()
     
     var completeButtonPressed : (() -> ()) = {}
     var deleteButtonPressed : (() -> ()) = {}
@@ -38,9 +38,6 @@ class TaskTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         isCompletedButton.layer.borderColor = Constants.Colors.borderGrey
-        isCompletedButton.layer.borderWidth = 2
-        isCompletedButton.layer.cornerRadius = 5
-        isCompletedButton.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -13,10 +13,7 @@ protocol TableViewReloadProtocol : AnyObject {
 }
 
 /// View Model for creating, adding, deleting and updating status of tasks
-class TasksViewModel {
-    
-    static let sharedInstance = TasksViewModel()
-    private init() {}
+class TaskListViewModel {
     
     ///Tasks array that holds objects of tyep Task
     var tasksArray = [Task]()
@@ -25,12 +22,12 @@ class TasksViewModel {
     
     ///Return total count of tasks
     func getTaskCount() -> Int {
-        return TasksViewModel.sharedInstance.tasksArray.count
+        return tasksArray.count
     }
     
     ///Return task at the given index
     func getTaskAt(index: Int) -> Task {
-        return TasksViewModel.sharedInstance.tasksArray[index]
+        return tasksArray[index]
     }
     
     ///Create a task with the given title and due time
@@ -41,25 +38,25 @@ class TasksViewModel {
     
     ///Add a task to the existing task array
     func add(task: Task) {
-        TasksViewModel.sharedInstance.tasksArray.append(task)
+        tasksArray.append(task)
         self.delegate?.didUpdateTaskList()
     }
     
     ///Delete task at the given index from the existing task array
     func deleteTask(at index: Int) {
-        TasksViewModel.sharedInstance.tasksArray.remove(at: index)
+        tasksArray.remove(at: index)
         self.delegate?.didUpdateTaskList()
     }
     
     ///Mark task as completed at the given index in the existing task array
     func markTaskAsCompleted(at index: Int) {
-        TasksViewModel.sharedInstance.tasksArray[index].isCompleted = true
+        tasksArray[index].isCompleted = true
         self.delegate?.didUpdateTaskList()
     }
     
     ///Mark task as not completed at the given index in the existing task array
     func markTaskAsNotCompleted(at index: Int) {
-        TasksViewModel.sharedInstance.tasksArray[index].isCompleted = false
+        tasksArray[index].isCompleted = false
         self.delegate?.didUpdateTaskList()
     }
     

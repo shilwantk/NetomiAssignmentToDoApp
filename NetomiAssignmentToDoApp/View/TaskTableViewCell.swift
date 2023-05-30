@@ -37,7 +37,7 @@ class TaskTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        isCompletedButton.layer.borderColor = Constants.Colors.borderGrey
+        isCompletedButton.layer.borderColor = Constants.Colors.BorderGrey
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -60,7 +60,7 @@ class TaskTableViewCell: UITableViewCell {
         
         if task.isPending {
             isPendingLabel.isHidden = false
-            isPendingLabel.text = Constants.TaskStatus.pending
+            isPendingLabel.text = Constants.TaskStatus.Pending
             taskNameLabel.textColor = .red
         } else {
             isPendingLabel.isHidden = true
@@ -69,7 +69,7 @@ class TaskTableViewCell: UITableViewCell {
         
         if viewModel.isTaskPending(task: task) {
             isPendingLabel.isHidden = false
-            isPendingLabel.text = Constants.TaskStatus.pending
+            isPendingLabel.text = Constants.TaskStatus.Pending
         } else {
             isPendingLabel.isHidden = true
         }

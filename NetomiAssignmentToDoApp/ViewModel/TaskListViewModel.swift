@@ -62,7 +62,7 @@ class TaskListViewModel {
     
     ///Check to see if task is Pending
     func isTaskPending(task: Task) -> Bool {
-        if task.taskTime < Date.now {
+        if task.taskTime <= Date.now {
             return true
         } else {
             return false

@@ -21,7 +21,7 @@ class AddTaskVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = Constants.VCTitles.addTaskVC
+        self.title = Constants.VCTitles.AddTaskVC
         navigationController?.navigationBar.prefersLargeTitles = false
         
         setUpUI()
@@ -37,7 +37,7 @@ class AddTaskVC: UIViewController {
             
             let newTask = viewModel.createTaskWith(title: taskName, time: taskTime)
             viewModel.add(task: newTask)
-            presentAlertWithTitle(title: "Success!", message: "Task successfully added.", options: ["OK"]) { option in
+            presentAlertWithTitle(title: Constants.AlertTitleStrings.Success, message: Constants.AlertMessageString.TaskAddedSuccessfully, options: ["OK"]) { option in
                 switch option {
                 case 0:
                     self.dismiss(animated: true)
@@ -48,21 +48,13 @@ class AddTaskVC: UIViewController {
     }
     
     private func setUpUI() {
-        
         taskTimePicker.locale = Locale.init(identifier: "en")
-        
-        cancelButton.layer.borderColor = Constants.Colors.borderGrey
-        cancelButton.setTitleColor(Constants.Colors.purple, for: .normal)
-        
-        addButton.setTitleColor( .white, for: .normal)
-        addButton.backgroundColor = Constants.Colors.purple
-        addButton.setTitleColor(.white, for: .normal)
     }
     
     private func isValidTaskDetails() -> Bool {
         
         guard let title = taskTitleTextFiled.text, !title.isEmpty else {
-            presentAlertWithTitle(title: "Alert!", message: "No task name added.", options: ["OK"]) { option in
+            presentAlertWithTitle(title: Constants.AlertTitleStrings.Failure, message: Constants.AlertMessageString.NoNameAdded, options: ["OK"]) { option in
                 switch option {
                 case 0:
                     self.dismiss(animated: true)
@@ -74,7 +66,7 @@ class AddTaskVC: UIViewController {
         
         let timeString = viewModel.getTimeStringFrom(date: taskTimePicker.date)
         if timeString.isEmpty {
-            presentAlertWithTitle(title: "Alert!", message: "No task time selected", options: ["OK"]) { option in
+            presentAlertWithTitle(title: Constants.AlertTitleStrings.Failure, message: Constants.AlertMessageString.NoTimeAdded, options: ["OK"]) { option in
                 switch option {
                 case 0:
                     self.dismiss(animated: true)
@@ -83,6 +75,7 @@ class AddTaskVC: UIViewController {
             }
             return false
         }
+        
         taskName = title
         taskTime = taskTimePicker.date
         return true

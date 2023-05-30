@@ -17,36 +17,18 @@ class TaskListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.topItem?.title = Constants.VCTitles.tasksVC
+        navigationController?.navigationBar.topItem?.title = Constants.VCTitles.TasksVC
         navigationController?.navigationBar.prefersLargeTitles = true
         
         viewModel.delegate = self
         setUpTableView()
-        addAddTaskButton()
     }
     
     private func setUpTableView() {
         tasksTableView.register(UINib(nibName: TaskTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: TaskTableViewCell.identifier)
     }
     
-    private func addAddTaskButton() {
-        let floatingButton = UIButton()
-        floatingButton.setTitle("+", for: .normal)
-        floatingButton.backgroundColor = UIColor(red: 236/255, green: 230/255, blue: 240/255, alpha: 1)
-        floatingButton.layer.cornerRadius = 10
-        floatingButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        floatingButton.setTitleColor(.black, for: .normal)
-        floatingButton.addTarget(self, action: #selector(navigateToAddTaskVC), for: .touchUpInside)
-        
-        view.addSubview(floatingButton)
-        floatingButton.translatesAutoresizingMaskIntoConstraints = false
-        floatingButton.widthAnchor.constraint(equalToConstant: 56).isActive = true
-        floatingButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        floatingButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor, constant: -20).isActive = true
-        floatingButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
-    }
-    
-    @objc func navigateToAddTaskVC() {
+    @IBAction func navigateToAddTaskVC() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "AddTaskVC") as? AddTaskVC else { return }
         vc.viewModel = self.viewModel
@@ -62,10 +44,11 @@ extension TaskListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.identifier, for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
+        
         let task = viewModel.getTaskAt(index: indexPath.row)
         cell.tag = indexPath.row
         cell.cellData = task
-        
+    
         cell.completeButtonPressed = { [self] in
             if task.isCompleted {
                 viewModel.markTaskAsNotCompleted(at: indexPath.row)
@@ -75,7 +58,7 @@ extension TaskListVC : UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.deleteButtonPressed = { [self] in
-            presentAlertWithTitle(title: "Alert!", message: "Do you want to delete this task? This action can’t be undone", options: ["OK", "Cancel"]) { option in
+            presentAlertWithTitle(title: Constants.AlertTitleStrings.Failure, message: Constants.AlertMessageString.DeleteTaskConfirmation, options: ["OK", "Cancel"]) { option in
                 switch option {
                 case 0:
                     self.viewModel.deleteTask(at: indexPath.row)

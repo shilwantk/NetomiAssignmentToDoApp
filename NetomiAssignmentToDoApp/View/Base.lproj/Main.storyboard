@@ -30,12 +30,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wY8-tw-S4A"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-Px-D7X" customClass="FloatingButton" customModule="NetomiAssignmentToDoApp" customModuleProvider="target">
+                                <rect key="frame" x="304" y="724" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="Wiy-ti-e8d"/>
+                                    <constraint firstAttribute="height" constant="56" id="fdc-tz-czK"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <connections>
+                                    <action selector="navigateToAddTaskVC" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyQ-mv-TwY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TJc-pX-4Hc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FKK-TJ-Gfu"/>
                             <constraint firstItem="TJc-pX-4Hc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UNf-Y8-wjP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lnc-Px-D7X" secondAttribute="bottom" constant="30" id="dhC-Ex-SHu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lnc-Px-D7X" secondAttribute="trailing" constant="30" id="pLz-2s-Rx1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TJc-pX-4Hc" secondAttribute="bottom" constant="10" id="qu5-jk-oZJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJc-pX-4Hc" secondAttribute="trailing" constant="10" id="wRe-wz-nc9"/>
                         </constraints>
@@ -122,36 +137,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cKH-D7-FgU">
                                 <rect key="frame" x="50" y="299" width="290" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBK-jN-teO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBK-jN-teO" customClass="CancelButton" customModule="NetomiAssignmentToDoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="CANCEL">
                                             <color key="baseForegroundColor" red="0.40392156862745099" green="0.31372549019607843" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapCancelButton:" destination="w6f-oj-pIN" eventType="touchUpInside" id="sdR-27-HJh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F28-CB-I3M">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F28-CB-I3M" customClass="AddButton" customModule="NetomiAssignmentToDoApp" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="140" height="60"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="ADD"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapAddButton:" destination="w6f-oj-pIN" eventType="touchUpInside" id="pGS-aC-e38"/>
                                         </connections>
@@ -207,6 +207,17 @@
             <point key="canvasLocation" x="-371" y="126"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="F28-CB-I3M">
+            <size key="intrinsicContentSize" width="59" height="34.333333333333336"/>
+        </designable>
+        <designable name="Lnc-Px-D7X">
+            <size key="intrinsicContentSize" width="34.333333333333336" height="34.333333333333336"/>
+        </designable>
+        <designable name="cBK-jN-teO">
+            <size key="intrinsicContentSize" width="89.333333333333329" height="34.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

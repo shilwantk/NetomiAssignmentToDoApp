@@ -10,6 +10,9 @@
 		4604013F2A24DABE00DB91A0 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4604013E2A24DABE00DB91A0 /* ViewController+Extension.swift */; };
 		460401422A24F95500DB91A0 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E550642A21001C00E6A997 /* AddTaskVC.swift */; };
 		468CC72A2A233E9C003F30DD /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */; };
+		469C59422A25E3BB00942CB5 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469C59412A25E3BB00942CB5 /* FloatingButton.swift */; };
+		469C59442A25E5A100942CB5 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469C59432A25E5A100942CB5 /* AddButton.swift */; };
+		469C59462A25E61B00942CB5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469C59452A25E61B00942CB5 /* CancelButton.swift */; };
 		46E5502C2A20FF2E00E6A997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */; };
 		46E5502E2A20FF2E00E6A997 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */; };
 		46E550332A20FF2E00E6A997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E550312A20FF2E00E6A997 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		4604013E2A24DABE00DB91A0 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		469C59412A25E3BB00942CB5 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		469C59432A25E5A100942CB5 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		469C59452A25E61B00942CB5 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		46E550282A20FF2E00E6A997 /* NetomiAssignmentToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetomiAssignmentToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5502B2A20FF2E00E6A997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5502D2A20FF2E00E6A997 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 				468CC7292A233E9C003F30DD /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		469C59472A25EF7100942CB5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				469C59432A25E5A100942CB5 /* AddButton.swift */,
+				469C59452A25E61B00942CB5 /* CancelButton.swift */,
+				469C59412A25E3BB00942CB5 /* FloatingButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		46E5501F2A20FF2D00E6A997 = {
@@ -154,6 +170,7 @@
 		46E5505B2A20FF3F00E6A997 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				469C59472A25EF7100942CB5 /* Buttons */,
 				46E550362A20FF3000E6A997 /* LaunchScreen.storyboard */,
 				46E550312A20FF2E00E6A997 /* Main.storyboard */,
 				46E550612A20FF8A00E6A997 /* Controllers */,
@@ -354,9 +371,12 @@
 				46E550632A21000100E6A997 /* TaskListVC.swift in Sources */,
 				46E550682A2102E400E6A997 /* TaskTableViewCell.swift in Sources */,
 				46E5502E2A20FF2E00E6A997 /* SceneDelegate.swift in Sources */,
+				469C59442A25E5A100942CB5 /* AddButton.swift in Sources */,
 				4604013F2A24DABE00DB91A0 /* ViewController+Extension.swift in Sources */,
+				469C59422A25E3BB00942CB5 /* FloatingButton.swift in Sources */,
 				46E5506D2A211A1800E6A997 /* Constants.swift in Sources */,
 				46E5506B2A21189D00E6A997 /* Task.swift in Sources */,
+				469C59462A25E61B00942CB5 /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

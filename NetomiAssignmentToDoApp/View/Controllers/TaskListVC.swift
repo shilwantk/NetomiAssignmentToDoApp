@@ -75,12 +75,15 @@ extension TaskListVC : UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.deleteButtonPressed = { [self] in
-            let alert = UIAlertController(title: "Alert!", message: "Do you want to delete this task? This action can’t be undone.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                self.viewModel.deleteTask(at: indexPath.row)
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            presentAlertWithTitle(title: "Alert!", message: "Do you want to delete this task? This action can’t be undone", options: ["OK", "Cancel"]) { option in
+                switch option {
+                case 0:
+                    self.viewModel.deleteTask(at: indexPath.row)
+                case 1:
+                    self.dismiss(animated: true)
+                default: break
+                }
+            }
         }
         
         return cell

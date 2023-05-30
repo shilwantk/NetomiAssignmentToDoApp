@@ -37,7 +37,13 @@ class AddTaskVC: UIViewController {
             
             let newTask = viewModel.createTaskWith(title: taskName, time: taskTime)
             viewModel.add(task: newTask)
-            showAlertWith(title: "Success!", message: "Task successfully added.")
+            presentAlertWithTitle(title: "Success!", message: "Task successfully added.", options: ["OK"]) { option in
+                switch option {
+                case 0:
+                    self.dismiss(animated: true)
+                default: break
+                }
+            }
         }
     }
     
@@ -56,13 +62,25 @@ class AddTaskVC: UIViewController {
     private func isValidTaskDetails() -> Bool {
         
         guard let title = taskTitleTextFiled.text, !title.isEmpty else {
-            showAlertWith(title: "Alert!", message: "No task name added")
+            presentAlertWithTitle(title: "Alert!", message: "No task name added.", options: ["OK"]) { option in
+                switch option {
+                case 0:
+                    self.dismiss(animated: true)
+                default: break
+                }
+            }
             return false
         }
         
         let timeString = viewModel.getTimeStringFrom(date: taskTimePicker.date)
         if timeString.isEmpty {
-            showAlertWith(title: "Alert!", message: "No task time selected")
+            presentAlertWithTitle(title: "Alert!", message: "No task time selected", options: ["OK"]) { option in
+                switch option {
+                case 0:
+                    self.dismiss(animated: true)
+                default: break
+                }
+            }
             return false
         }
         taskName = title
